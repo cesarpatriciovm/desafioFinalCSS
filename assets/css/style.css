@@ -1,0 +1,304 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-rows: 1fr 10fr 1fr; */
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+nav {
+    background-color: #bb2649;
+    grid-area: nav;
+    height: 40vh;  
+}
+
+main {
+    grid-area: main;
+    background-color: #f5f5f5;
+}
+
+.item-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-nav .logo {
+    height: 120px;
+    width: 120px;
+}
+
+.item-nav h1 {
+    color: #ffc3d4;
+    font-size: 24px;
+    margin: auto;
+    padding-right: 100px;
+}
+
+.item-nav img {
+    width: 20px;
+    padding-right: 10px;
+}
+
+.container-nosotros {
+    font-size: 12px;
+    color: #4b4f5d;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-nosotros h2 {
+    padding: 10px;
+}
+
+.container-nosotros h4 {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+.container-nosotros h5 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.item-despachos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-nosotros p {
+    padding: 0 50px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 300;
+}
+
+.filtro-productos {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.text-filtro.option {
+    font-size: 10px;
+    color: #4b4f5d;
+}
+
+.text-filtro.parrafo {
+    font-size: 12px;
+    color: #4b4f5d;
+    font-weight: 900;
+}
+
+.container-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f35d74;
+}
+
+.card-producto {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+    margin: auto;
+}
+
+.card-producto img {
+    width: 110px;
+    object-fit: cover;
+    flex-grow: 1;
+    flex-basis: 100%;
+    filter: grayscale(100%);
+	transition: .3s ease-in-out;
+}
+
+.card-producto:hover img {
+    filter: grayscale(0);
+}
+
+.name-vino {
+    color: #4b4f5d;
+    font-size: 12px;
+}
+
+button {
+    background-color: #bb2649;
+    color: #ffc3d4;
+    font-size: 8px;
+    border-color: #bb2649;
+    border-style:dashed;
+    padding: 2px;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.paginas li {
+    border: 1px solid #4b4f5daa;
+    padding: 5px;    
+    color: #4b4f5d;
+    font-size: 12px;
+    margin: 0 4px;
+    margin-bottom: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.iconos-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa-brands {
+    width: 10px;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    padding: 5px 0;
+    color: #ffc3d4;
+    font-weight: 900;
+}
+
+.container-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #ffc3d4;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+@media (max-width: 576px) {
+    menu {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {    
+    .grid-container {
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+    "nav main"
+    "footer main";
+    }
+    .container-items {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* gap: 5px 0; */
+        height: 90vh;
+        margin: auto;
+    }
+
+    .container-nosotros h4 {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+    .container-nosotros h5 {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+    nav {
+        height: 700px;
+    }
+
+    footer {
+        height: 200px;
+    }
+
+    footer p {
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    footer button {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .iconos-footer {
+        padding: 5px 0;
+    }
+
+    .filtro-productos {
+        height: 5vh;
+    }
+
+    .container-paginas {
+        display: none;
+    }
+
+    .item-nav .logo {
+        height: 200px;
+        width: 200px;
+    }
+    
+
+    .item-nav .icon-menu {
+        display: none;
+    }
+
+    .item-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-nav h1 {
+        padding: 0;
+    }
+
+    .menu-nav {
+        list-style: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu-nav li {
+        padding: 10px;
+        color: #ffc3d4;
+        font-weight: 900;
+    }
+
+    .container-contacto h3 {
+        padding: 5px;
+    }
+}
