@@ -206,6 +206,16 @@ footer p {
     padding-top: 10px;
 }
 
+.container-input {
+    width: 90%;
+    
+}
+
+.text-contacto {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 @media (max-width: 576px) {
     menu {
         display: none;
@@ -237,11 +247,11 @@ footer p {
     }
 
     nav {
-        height: 600px;
+        height: 700px;
     }
 
     footer {
-        height: 300px;
+        height: auto;
     }
 
     footer p {
